@@ -1,0 +1,205 @@
+/* IPTV UK — Expat Brits Abroad | airmail / postcard theme
+   Paper white + royal navy + pillar-box red + airmail blue stripes */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #1c2333;
+  background: #f4f1ea;
+  line-height: 1.65;
+}
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 22px; }
+a { color: #1b2a6b; }
+a:hover { color: #c8102e; }
+
+/* Airmail striped border: red / white / blue diagonal stripes */
+.hero {
+  background: #1b2a6b;
+  color: #fff;
+  padding: 46px 0 40px;
+  border-bottom: 14px solid transparent;
+  border-image: repeating-linear-gradient(-45deg, #c8102e 0 22px, #fff 22px 44px, #2a6db5 44px 66px, #fff 66px 88px) 14;
+}
+.kicker {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #ffd9de;
+}
+.hero h1 {
+  font-size: 2.3rem;
+  line-height: 1.2;
+  margin: 14px 0 16px;
+}
+.hero .lead { font-size: 1.12rem; color: #e8ecf7; }
+.hero .lead a { color: #ffd166; }
+.cta {
+  display: inline-block;
+  margin: 14px 12px 0 0;
+  padding: 12px 22px;
+  background: #c8102e;
+  color: #fff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 2px solid #c8102e;
+}
+.cta:hover { background: #a50d26; color: #fff; }
+.cta.ghost { background: transparent; border-color: #fff; }
+.cta.ghost:hover { background: #fff; color: #1b2a6b; }
+
+main { padding: 30px 0 10px; }
+section { margin-bottom: 38px; }
+h2 {
+  font-size: 1.6rem;
+  color: #1b2a6b;
+  border-bottom: 3px solid #c8102e;
+  padding-bottom: 8px;
+}
+h3 { color: #1b2a6b; }
+p { margin: 0 0 14px; }
+
+/* Destination postcards */
+.postcards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 20px 0;
+}
+.postcard {
+  background: #fffdf7;
+  border: 1px solid #d8d2c2;
+  border-top: 10px solid transparent;
+  border-image: repeating-linear-gradient(-45deg, #c8102e 0 16px, #fff 16px 32px, #2a6db5 32px 48px, #fff 48px 64px) 10;
+  padding: 16px 18px;
+  box-shadow: 2px 3px 0 rgba(27, 42, 107, 0.12);
+}
+.postcard h3 { margin: 0 0 4px; font-size: 1.15rem; }
+.postcard .stamp {
+  display: inline-block;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c8102e;
+  border: 1.5px dashed #c8102e;
+  padding: 3px 8px;
+  margin: 0 0 10px;
+}
+.postcard p:last-child { margin-bottom: 0; }
+
+/* Time-zone table */
+table.timezones {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.95rem;
+}
+table.timezones th {
+  background: #1b2a6b;
+  color: #fff;
+  text-align: left;
+  padding: 10px 12px;
+}
+table.timezones td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #d8d2c2;
+}
+table.timezones tr:nth-child(even) td { background: #fffdf7; }
+.note {
+  font-size: 0.9rem;
+  color: #5a5f6b;
+  font-style: italic;
+}
+
+/* Numbered setup steps */
+ol.steps { counter-reset: step; list-style: none; padding: 0; }
+ol.steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 0 0 14px 52px;
+}
+ol.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0; top: 2px;
+  width: 34px; height: 34px;
+  line-height: 34px;
+  text-align: center;
+  background: #c8102e;
+  color: #fff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+/* FAQ accordions */
+details {
+  background: #fffdf7;
+  border: 1px solid #d8d2c2;
+  border-left: 5px solid #2a6db5;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+}
+summary {
+  font-weight: 700;
+  color: #1b2a6b;
+  cursor: pointer;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+details p { margin: 10px 0 2px; }
+
+/* Verdict: airmail envelope panel */
+.verdict {
+  background: #1b2a6b;
+  color: #fff;
+  padding: 26px 28px;
+  border-top: 12px solid transparent;
+  border-image: repeating-linear-gradient(-45deg, #c8102e 0 20px, #fff 20px 40px, #2a6db5 40px 60px, #fff 60px 80px) 12;
+}
+.verdict h2 { color: #fff; border-bottom-color: #ffd166; }
+.verdict a { color: #ffd166; }
+.verdict .cta { color: #fff; }
+.verdict .cta:hover { color: #fff; }
+
+/* Footer */
+footer {
+  background: #1c2333;
+  color: #cfd4e0;
+  padding: 34px 0 26px;
+  border-top: 14px solid transparent;
+  border-image: repeating-linear-gradient(-45deg, #c8102e 0 22px, #fff 22px 44px, #2a6db5 44px 66px, #fff 66px 88px) 14;
+}
+footer h2 { color: #fff; border-bottom-color: #c8102e; }
+footer h3 {
+  color: #ffd166;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+footer a { color: #cfd4e0; }
+footer a:hover { color: #fff; }
+.explore {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 28px;
+}
+.explore ul { list-style: none; padding: 0; }
+.explore li { margin-bottom: 5px; font-size: 0.95rem; }
+.disclaimer {
+  margin-top: 26px;
+  font-size: 0.85rem;
+  color: #9aa1b2;
+  border-top: 1px solid #39415a;
+  padding-top: 16px;
+}
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 1.7rem; }
+  .postcards { grid-template-columns: 1fr; }
+  .explore { grid-template-columns: 1fr 1fr; }
+}
